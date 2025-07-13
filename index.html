@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator</title>
+  </head>
+  <body>
+    <div class="kalkulator">
+      <input type="text" class="display" id="display" disabled />
+      <div class="buttons">
+        <button class="button" onclick="">C</button>
+        <button class="button" onclick="">1</button>
+        <button class="button" onclick="">2</button>
+        <button class="button" onclick="">3</button>
+        <button class="button" onclick="">+</button>
+        <button class="button" onclick="">4</button>
+        <button class="button" onclick="">5</button>
+        <button class="button" onclick="">6</button>
+        <button class="button" onclick="">-</button>
+        <button class="button" onclick="">7</button>
+        <button class="button" onclick="">8</button>
+        <button class="button" onclick="">9</button>
+        <button class="button" onclick="">/</button>
+        <button class="button" onclick="">x</button>
+        <button class="button" onclick="">0</button>
+        <button class="button" onclick="">=</button>
+      </div>
+    </div>
+  </body>
+  <footer><p>....Under development 2025</p></footer>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: rgb(224, 221, 221);
+    }
+
+    .kalkulator {
+      width: 300px;
+      height: 400px;
+      background-color: gray;
+      border-radius: 10px;
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+
+      padding: 20px 25px;
+    }
+
+    .display {
+      width: 100%;
+      margin-top: 6px;
+      padding-top: 6pc;
+    }
+
+    .buttons {
+      margin-top: 1pc;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+    }
+
+    .button {
+      border-radius: 8px;
+      font-size: medium;
+      align-items: flex-end;
+      padding: 20px;
+      background-color: red;
+      color: black;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</html>
