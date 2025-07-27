@@ -28,3 +28,34 @@ function clearDisplay() {
   previousInput = "";
   document.getElementById("display").value = "";
 }
+
+calculateResult = () => {
+  if (currentInput === "" || previousInput === "" || currentOperation === "") {
+    return;
+  }
+
+  let result;
+  const prev = parseFloat(previousInput);
+  const current = parseFloat(currentInput);
+
+  switch (currentOperation) {
+    case "+":
+      result = prev + current;
+      break;
+    case "-":
+      result = prev - current;
+      break;
+    case "*":
+      result = prev * current;
+      break;
+    case "/":
+      result = current === 0 ? "cannot divide by zero" : prev / current;
+      break;
+    default:
+      return;
+  }
+  document.getElementById("display").value = result.toString();
+  currentInput = "";
+  currentOperation = "";
+  previousInput = result;
+};
