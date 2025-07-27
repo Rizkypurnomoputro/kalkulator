@@ -1,17 +1,30 @@
 let currentInput = "";
-let operator = "";
+let currentOperation = "";
 let previousInput = "";
 
 function appendNumber(number) {
   currentInput += number;
   document.getElementById(
     "display"
-  ).value = `${currentInput} ${operator} ${previousInput}`;
+  ).value = `${currentInput} ${currentOperation} ${previousInput}`;
+}
+
+function appendOperation(operation) {
+  if (currentInput === "") return;
+  if (previousInput !== "") {
+    calculate();
+  }
+  currentOperation = operation;
+  previousInput = currentInput;
+  currentInput = "";
+  document.getElementById(
+    "display"
+  ).value = `${previousInput} ${currentOperation}`;
 }
 
 function clearDisplay() {
   currentInput = "";
-  operator = "";
+  currentOperation = "";
   previousInput = "";
   document.getElementById("display").value = "";
 }
